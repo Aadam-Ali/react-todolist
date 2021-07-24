@@ -5,7 +5,6 @@ const TodoList = ({ todos, setTodos }) => {
 
   useEffect(() => {
     setTodos(JSON.parse(localStorage.getItem("todos")))
-    if (!JSON.parse(localStorage.getItem("todos"))) { return (<div></div>) }
   }, [])
   useEffect(() => { localStorage.setItem("todos", JSON.stringify(todos)) }, [todos])
 
