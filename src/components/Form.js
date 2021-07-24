@@ -12,7 +12,7 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
     }
     setTodos([
       ...todos,
-      { text: inputText, completed: false, id: todos.length },
+      { text: inputText, completed: false, id: new Date() },
     ]);
     setInputText("");
   };
