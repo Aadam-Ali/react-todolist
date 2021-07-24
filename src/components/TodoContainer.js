@@ -3,10 +3,13 @@ import TodoItem from "./TodoItem"
 
 const TodoList = ({ todos, setTodos }) => {
 
-  useEffect(() => { setTodos(JSON.parse(localStorage.getItem("todos"))) }, [])
+  useEffect(() => {
+    setTodos(JSON.parse(localStorage.getItem("todos")))
+    if (!localStorage.setItem("todos", JSON.stringify(todos))) { return (<div></div>) }
+  }, [])
   useEffect(() => { localStorage.setItem("todos", JSON.stringify(todos)) }, [todos])
 
-  if (!localStorage.setItem("todos", JSON.stringify(todos))) {return}
+
 
   return (
     <div className="todo-container">
