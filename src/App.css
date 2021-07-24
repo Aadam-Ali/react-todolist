@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=B612&family=Open+Sans&display=swap");
+
+:root {
+  --white: #ffffff;
+  --navy: #2c3e50;
+  --red: #fa95a3;
+  --green: #95f3a3;
+  --pink: #ffcccc;
+  --blue: #ccffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
+  background: linear-gradient(90deg, var(--blue), var(--pink));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  color: black;
+  justify-content: center;
+}
+
+.header h1 {
+  font-family: "B612", sans-serif;
+  font-size: 4.8rem;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.form button {
+  color: white;
+  width: 3rem;
+}
+
+.todo-input {
+  border: none;
+  border-bottom: 0.125rem solid black;
+  transition: all 0.1s ease-in;
+  font-size: 1.5rem;
+  height: 3rem;
+  padding-left: 0.25rem;
+  background: none;
+  width: 25%;
+}
+
+.todo-input:focus {
+  outline: none;
+}
+
+.btn-add-todo {
+  background: none;
+  padding: 0.125rem;
+  border: none;
+  border-bottom: 0.125rem solid black;
+  transition: all 0.1s ease-in;
+}
+
+.btn-add-todo:hover {
+  font-size: 120%;
+}
+
+.fa-plus {
+  margin: 0.0625px;
+  color: black;
+}
+
+.todo-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-card {
+  width: 30%;
+  margin: 0.625rem;
+  display: flex;
+  align-items: center;
+  border: 0.0625rem solid black;
+  min-height: 3.125rem;
+  padding-left: 0.5rem;
+  background: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todo-item {
+  width: 24rem;
+  font-size: 1.5rem;
+  overflow-wrap: break-word;
+}
+
+.btn-complete,
+.btn-delete {
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.3125rem;
+}
+
+.btn-delete {
+  background: var(--red);
+}
+
+.btn-complete {
+  background: var(--green);
+}
+
+.btn-container {
+  justify-content: right;
+  margin-left: auto;
+}
+
+.completed-todo {
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+@media only screen and (max-width: 1024px) {
+  .todo-card {
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .todo-item {
+    width: 16rem;
+    font-size: 1.25rem;
+    overflow-wrap: break-word;
+  }
+
+  .todo-input {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .todo-card {
+    width: 50%;
+  }
+
+  .todo-item {
+    width: 16rem;
+    font-size: 1.25rem;
+    overflow-wrap: break-word;
+  }
+
+  .todo-input {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 3.2rem;
+  }
+
+  .todo-card {
+    width: 80%;
+  }
+
+  .todo-item {
+    width: 10rem;
+    font-size: 1rem;
+    overflow-wrap: break-word;
+  }
+
+  .todo-input {
+    width: 65%;
+    font-size: 1rem;
+    height: 2rem;
   }
 }
