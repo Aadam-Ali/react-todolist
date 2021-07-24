@@ -5,6 +5,8 @@ const TodoList = ({ todos, setTodos }) => {
 
   useEffect(() => {
     setTodos(JSON.parse(localStorage.getItem("todos")))
+
+    if (JSON.parse(localStorage.getItem("todos")) === null) {setTodos([{text: "Welcome to Progetto", completed: false, id: new Date}])}
   }, [])
   useEffect(() => { localStorage.setItem("todos", JSON.stringify(todos)) }, [todos])
 
