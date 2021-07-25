@@ -16,5 +16,8 @@ As far as I am aware there are no bugs, however if you do find any don't be shy 
 
 ## Technologies Used
 
-HTML, CSS, JavaScript and React
+- HTML
+- CSS
+- JavaScript 
+- React
 
