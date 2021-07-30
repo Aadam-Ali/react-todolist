@@ -1,4 +1,4 @@
-# Title of Project
+# Progetto
 
 🖥️ [Live Preview](https://todolist-react-aadam.herokuapp.com/)
 
@@ -18,6 +18,5 @@ As far as I am aware there are no bugs, however if you do find any don't be shy 
 
 - HTML
 - CSS
-- JavaScript 
+- JavaScript
 - React
-
